@@ -3,9 +3,14 @@ This is a news app plugin... (鲜闻插件)
 <br>
 <br>
 <br>
+先上图：
+![](https://github.com/frendyxzc/XwsdkPlugin/screenshot/161110.gif)
+<br>
+<br>
+
 功能：
 
->两行代码几个配置实现应用内直接安装或打开鲜闻App
+>两行代码几个配置 实现应用内直接安装或打开指定APP(鲜闻)
 
 原理：
 
@@ -65,5 +70,7 @@ This is a news app plugin... (鲜闻插件)
       }
   }
 ```
-
-Contact us: 3176385478@qq.com
+<br>
+<br>
+<br>
+Contact Us: 3176385478@qq.com
