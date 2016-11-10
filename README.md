@@ -1,8 +1,8 @@
 # XwsdkPlugin
-This is a news app plugin... (鲜闻插件，代码上传中)
-
-
-
+This is a news app plugin... (鲜闻插件)
+<br>
+<br>
+<br>
 功能：
 
 >两行代码几个配置实现应用内直接安装或打开鲜闻App
