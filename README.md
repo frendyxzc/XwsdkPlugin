@@ -2,7 +2,6 @@
 **This is a news app plugin... (鲜闻插件)**
 <br>
 <br>
-<br>
 >![image](https://raw.githubusercontent.com/frendyxzc/XwsdkPlugin/master/screenshot/161110.gif)
 <br>
 <br>
@@ -17,7 +16,7 @@
 
 **用法**：
 
->1.依赖module - xwsdk：
+>1.依赖module - xwsdk;
 
 >2.Application继承XwBaseApplication，如下：
 ```java
@@ -27,7 +26,7 @@
 
 >3.AndroidManifest.xml里application添加name：
 ```java
-   <application
+  <application
       android:name=".BaseApplication"
       ...
   </application>
@@ -38,8 +37,6 @@
   public class MainActivity extends AppCompatActivity {
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-          ...
-          
           Button button = (Button) findViewById(R.id.button);
           button.setOnClickListener(new View.OnClickListener() {
               @Override
@@ -48,7 +45,6 @@
                   XwBaseApplication.getXwsdkManager().install();
               }
           });
-          
           Button button1 = (Button) findViewById(R.id.button1);
           button1.setOnClickListener(new View.OnClickListener() {
               @Override
@@ -60,7 +56,9 @@
       }
   }
 ```
+
 <br>
 <br>
 <br>
+
 Contact Us: 3176385478@qq.com
