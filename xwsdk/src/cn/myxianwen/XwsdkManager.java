@@ -32,6 +32,7 @@ public class XwsdkManager implements ServiceConnection {
     private Context mContext;
     private ApkItem xwApk;
     final Handler handler = new Handler();
+    private IOnInstallListener mInstallListener;
 
     public XwsdkManager(Application app) {
         init(app);
@@ -119,6 +120,11 @@ public class XwsdkManager implements ServiceConnection {
                 public void run() {
                     Toast.makeText(mContext, re == PluginManager.INSTALL_FAILED_NO_REQUESTEDPERMISSION ?
                             "安装失败，文件请求的权限太多或者您已安装该应用" : "安装完成", Toast.LENGTH_SHORT).show();
+
+                    if(re != PluginManager.INSTALL_FAILED_NO_REQUESTEDPERMISSION
+                            && mInstallListener != null) {
+                        mInstallListener.onComplete();
+                    }
                 }
             });
         } catch (RemoteException e) {
@@ -155,5 +161,32 @@ public class XwsdkManager implements ServiceConnection {
                 e.printStackTrace();
             }
         }
+    }
+
+    public int hasInstalled() {
+        if (!PluginManager.getInstance().isConnected()) {
+            return -1;
+        }
+        if (xwApk == null || xwApk.installing) {
+            return -2;
+        }
+        try {
+            if (PluginManager.getInstance().getPackageInfo(xwApk.packageInfo.packageName, 0) != null) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -3;
+        }
+    }
+
+    public void setInstallListener(IOnInstallListener listener) {
+        mInstallListener = listener;
+    }
+
+    public interface IOnInstallListener {
+        void onComplete();
     }
 }

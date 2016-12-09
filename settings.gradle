@@ -1,2 +1,2 @@
-include ':xwsdk'
+include ':xwsdk', ':xbutton'
 include ':app'

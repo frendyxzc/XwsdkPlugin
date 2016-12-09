@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">sample</string>
+
+    <string name="Upload">Upload</string>
+    <string name="Error">Error</string>
+    <string name="Complete">Complete</string>
 </resources>
