@@ -2,7 +2,7 @@
 **This is a news app plugin... (鲜闻插件)**
 <br>
 <br>
->![image](https://raw.githubusercontent.com/frendyxzc/XwsdkPlugin/master/screenshot/161110.gif)
+>![image](https://raw.githubusercontent.com/frendyxzc/XwsdkPlugin/master/screenshot/161213.gif)
 <br>
 <br>
 
